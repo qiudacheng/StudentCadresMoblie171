@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_light"
+    android:background="?attr/colorPrimary"
+    android:hapticFeedbackEnabled="false"
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/image_main_picter"
+        android:id="@+id/image_main"
         android:layout_width="224dp"
         android:layout_height="174dp"
         android:layout_marginTop="16dp"
@@ -26,7 +27,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_main_picter" />
+        app:layout_constraintTop_toBottomOf="@+id/image_main" />
 
     <Button
         android:id="@+id/btn_maim_set"
@@ -65,8 +66,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="35dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginLeft="79dp"
+        android:layout_marginStart="79dp"
         android:text="密码："
         app:layout_constraintBottom_toTopOf="@+id/btn_maim_set"
         app:layout_constraintStart_toStartOf="parent" />
