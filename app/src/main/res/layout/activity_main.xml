@@ -32,33 +32,21 @@
         android:id="@+id/btn_main_set"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="92dp"
         android:text="登录"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintHorizontal_bias="0.294"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btn_main_readname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="96dp"
-        android:text="注册"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toEndOf="@+id/btn_main_set" />
 
     <TextView
         android:id="@+id/tv_main_username"
         android:layout_width="wrap_content"
         android:layout_height="29dp"
-        android:layout_marginBottom="26dp"
         android:layout_marginLeft="80dp"
         android:layout_marginStart="80dp"
         android:text="账号："
-        app:layout_constraintBottom_toTopOf="@+id/tv_main_password"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtTxt_main_name"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -66,8 +54,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="81dp"
-        android:layout_marginLeft="79dp"
-        android:layout_marginStart="79dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginStart="80dp"
         android:text="密码："
         app:layout_constraintBottom_toTopOf="@+id/btn_main_set"
         app:layout_constraintStart_toStartOf="parent" />
@@ -80,12 +68,14 @@
         android:layout_marginLeft="2dp"
         android:layout_marginRight="65dp"
         android:layout_marginStart="2dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/edtTxt_main_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/tv_main_username" />
+        app:layout_constraintStart_toEndOf="@+id/tv_main_username"
+        app:layout_constraintTop_toTopOf="@+id/tv_main_titile" />
 
     <EditText
         android:id="@+id/edtTxt_main_password"
@@ -97,5 +87,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tv_main_password" />
+
+    <Button
+        android:id="@+id/btn_main_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="92dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="68dp"
+        android:layout_marginStart="36dp"
+        android:text="退出"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_main_set" />
 
 </android.support.constraint.ConstraintLayout>
