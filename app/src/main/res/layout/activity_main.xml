@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorPrimary"
-    android:hapticFeedbackEnabled="false"
+    android:background="@drawable/timg"
     tools:context=".MainActivity">
 
     <ImageView
@@ -30,31 +29,32 @@
         app:layout_constraintTop_toBottomOf="@+id/image_main" />
 
     <Button
-        android:id="@+id/btn_maim_set"
+        android:id="@+id/btn_main_set"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="154dp"
+        android:layout_marginBottom="96dp"
         android:text="登录"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintHorizontal_bias="0.297"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_main_readname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="154dp"
+        android:layout_marginBottom="96dp"
         android:text="注册"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_maim_set" />
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toEndOf="@+id/btn_main_set" />
 
     <TextView
-        android:id="@+id/tv_main_name"
+        android:id="@+id/tv_main_username"
         android:layout_width="wrap_content"
         android:layout_height="29dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="26dp"
         android:layout_marginLeft="80dp"
         android:layout_marginStart="80dp"
         android:text="账号："
@@ -65,18 +65,17 @@
         android:id="@+id/tv_main_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="81dp"
         android:layout_marginLeft="79dp"
         android:layout_marginStart="79dp"
         android:text="密码："
-        app:layout_constraintBottom_toTopOf="@+id/btn_maim_set"
+        app:layout_constraintBottom_toTopOf="@+id/btn_main_set"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/edtTxt_main_name"
         android:layout_width="199dp"
         android:layout_height="42dp"
-        android:layout_marginBottom="12dp"
         android:layout_marginEnd="65dp"
         android:layout_marginLeft="2dp"
         android:layout_marginRight="65dp"
@@ -85,7 +84,8 @@
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/edtTxt_main_password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_main_name" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_main_username" />
 
     <EditText
         android:id="@+id/edtTxt_main_password"
