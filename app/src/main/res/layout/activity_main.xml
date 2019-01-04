@@ -4,30 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/timg"
+    android:background="@drawable/beij"
     tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/image_main"
-        android:layout_width="224dp"
-        android:layout_height="174dp"
-        android:layout_marginTop="16dp"
-        android:hapticFeedbackEnabled="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/imgapp" />
 
     <TextView
         android:id="@+id/tv_main_titile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="206dp"
         android:text="学生干部管理系统"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_main" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_main_set"
