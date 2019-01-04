@@ -33,6 +33,12 @@ private Button btn_show_jinru,btn_show_exit;
         tv_show_password=(TextView)findViewById(R.id.tv_show_password);
         tv_show_name.setText("用户名："+name);
         tv_show_password.setText("密码："+password);
+        btn_show_jinru.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                enter();
+            }
+        });
 btn_show_exit.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
@@ -59,4 +65,10 @@ btn_show_exit.setOnClickListener(new View.OnClickListener() {
     }
 });
     }
+
+    private void enter() {
+       Intent intent=new Intent(this,AddActivity.class);
+       startActivity(intent);
+    }
+
 }

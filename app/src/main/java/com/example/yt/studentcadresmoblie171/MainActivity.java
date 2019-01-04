@@ -31,6 +31,7 @@ private Button btn_main_set,btn_main_exit;
         btn_main_exit=((Button)findViewById(R.id.btn_main_exit));
         btn_main_exit.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View view) {
                 this.exit();
             }
