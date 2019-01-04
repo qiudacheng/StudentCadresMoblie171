@@ -12,10 +12,11 @@
         android:layout_width="224dp"
         android:layout_height="174dp"
         android:layout_marginTop="16dp"
+        android:hapticFeedbackEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/webwxgetmsgimg" />
+        app:srcCompat="@drawable/imgapp" />
 
     <TextView
         android:id="@+id/tv_main_titile"
@@ -43,8 +44,8 @@
         android:id="@+id/tv_main_username"
         android:layout_width="wrap_content"
         android:layout_height="29dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
         android:text="账号："
         app:layout_constraintBaseline_toBaselineOf="@+id/edtTxt_main_name"
         app:layout_constraintStart_toStartOf="parent" />
@@ -54,8 +55,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="81dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
         android:text="密码："
         app:layout_constraintBottom_toTopOf="@+id/btn_main_set"
         app:layout_constraintStart_toStartOf="parent" />
