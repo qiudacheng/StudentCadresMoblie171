@@ -11,22 +11,66 @@
         android:id="@+id/tv_add_title"
         android:layout_width="262dp"
         android:layout_height="53dp"
+        android:layout_marginTop="16dp"
         android:text="广东职业技术学院"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="30sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="32dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_add_title2"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         android:text="学生干部管理系统"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="96dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_add_title" />
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="260dp"
+        android:layout_marginBottom="112dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn_add_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="添加学生干部信息" />
+
+        <Button
+            android:id="@+id/btn_add_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="修改学生干部信息" />
+
+        <Button
+            android:id="@+id/btn_add_chaxun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查询学生干部信息" />
+
+        <Button
+            android:id="@+id/btn_add_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="删除学生干部信息" />
+
+        <Button
+            android:id="@+id/btn_add_cha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查看已录入学生干部信息" />
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
