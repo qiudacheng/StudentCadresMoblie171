@@ -41,8 +41,8 @@ btn_show_exit.setOnClickListener(new View.OnClickListener() {
 
     private void exit() {
         Dialog dialog=new AlertDialog.Builder(activity_show.this)
-                .setTitle("程序退出？")
-                .setMessage("您确定退出么？")
+                .setTitle("返回上一层菜单？")
+                .setMessage("您确定返回么？")
                 .setIcon(R.drawable.ic_launcher_background)
                 .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
