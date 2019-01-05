@@ -67,8 +67,8 @@ btn_show_exit.setOnClickListener(new View.OnClickListener() {
     }
 
     private void enter() {
-       Intent intent=new Intent(this,AddActivity.class);
-       startActivity(intent);
+        Intent intent=new Intent(this,AddActivity.class);
+        startActivity(intent);
     }
 
 }
