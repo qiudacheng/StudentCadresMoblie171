@@ -18,7 +18,6 @@
         </activity>
         <activity android:name=".activity_show" />
         <activity android:name=".AddActivity" />
-        <activity android:name=".AppendActivity"></activity>
     </application>
 
 </manifest>

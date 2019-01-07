@@ -11,13 +11,13 @@
         android:id="@+id/tv_add_title"
         android:layout_width="262dp"
         android:layout_height="53dp"
-        android:layout_marginTop="16dp"
         android:text="广东职业技术学院"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.602"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,7 +25,6 @@
         android:id="@+id/tv_add_title2"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
         android:text="学生干部管理系统"
         android:textColor="@android:color/white"
         android:textSize="20sp"
@@ -34,43 +33,197 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_add_title" />
 
-    <LinearLayout
-        android:layout_width="344dp"
-        android:layout_height="260dp"
-        android:layout_marginBottom="112dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/tv_add_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="115dp"
+        android:text="姓名："
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/EdtTxt_add_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginRight="84dp"
+        android:ems="10"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/tv_add_title2" />
+
+    <TextView
+        android:id="@+id/tv_add_nublem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="36dp"
+        android:text="学号："
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_add_name" />
+
+    <EditText
+        android:id="@+id/EdtTxt_add_nublem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginRight="84dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EdtTxt_add_name" />
+
+    <TextView
+        android:id="@+id/tv_add_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="36dp"
+        android:text="班级："
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_add_nublem" />
+
+    <EditText
+        android:id="@+id/EdtTxt_add_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="84dp"
+        android:layout_marginRight="84dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_add_class"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_add_zhiwu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="38dp"
+        android:text="职务："
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_add_class" />
+
+    <EditText
+        android:id="@+id/EdtTxt_add_zhiwu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginRight="84dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EdtTxt_add_class" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <Button
             android:id="@+id/btn_add_add"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="添加学生干部信息" />
-
-        <Button
-            android:id="@+id/btn_add_update"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="修改学生干部信息" />
+            android:text="添加"
+            tools:layout_editor_absoluteX="233dp"
+            tools:layout_editor_absoluteY="396dp" />
 
         <Button
             android:id="@+id/btn_add_chaxun"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="查询学生干部信息" />
+            android:text="查询"
+            tools:layout_editor_absoluteX="187dp"
+            tools:layout_editor_absoluteY="396dp" />
 
         <Button
             android:id="@+id/btn_add_delete"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="删除学生干部信息" />
+            android:text="删除"
+            tools:layout_editor_absoluteX="96dp"
+            tools:layout_editor_absoluteY="396dp" />
 
         <Button
-            android:id="@+id/btn_add_cha"
-            android:layout_width="match_parent"
+            android:id="@+id/btn_add_update"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="查看已录入学生干部信息" />
+            android:text="修改"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="396dp" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_add_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="38dp"
+        android:text="所属："
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_add_zhiwu" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="300dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_add_home"
+        app:layout_constraintTop_toBottomOf="@+id/EdtTxt_add_zhiwu">
+
+        <CheckBox
+            android:id="@+id/checkBox_stu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="学生会" />
+
+        <CheckBox
+            android:id="@+id/checkBox_yishu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="艺术团" />
+
+        <CheckBox
+            android:id="@+id/checkBox_shetuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="社团" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_width="355dp"
+        android:layout_height="114dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
