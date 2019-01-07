@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -115,16 +116,41 @@ public class AddActivity extends AppCompatActivity implements View.OnClickListen
                break;
 
            case R.id.btn_add_chaxun:
-                name=Edtname.getText().toString().trim();
-                Class=Edtclass.getText().toString().trim();
-                zhiwu=Edtzhiwu.getText().toString().trim();
-                nublem= Edtnublem.getText().toString().trim();
+
+                db=myhelper.getReadableDatabase();
+                Cursor cursor=db.query("information",null,null,null,null,null,null);
+                if (cursor.moveToFirst())
+                {
+                    mTvShow.setText("");
+                    Toast.makeText(this,"没有信息",Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    cursor.moveToFirst();
+                    mTvShow.setText("姓名:"+cursor.getString(1)+" 学号:"+cursor.getString(2)+" 班级:"+cursor.getString(3)+" 职务:"+cursor.getString(4)+" 所属组织:"+cursor.getString(5));
+
+                }
+                while(cursor.moveToNext()){
+                    mTvShow.append("\n"+" 姓名:"+cursor.getString(1)+" 学号:"+cursor.getString(2)+" 班级:"+cursor.getString(3)+" 职务:"+cursor.getString(4)+" 所属组织:"+cursor.getString(5));
+
+           }
+
+                cursor.close();
+                db.close();
+                break;
+            case R.id.btn_add_delete:
+                db=myhelper.getWritableDatabase();
+                db.delete("information",null,null);
+                Toast.makeText(this,"全部信息已删除",Toast.LENGTH_SHORT).show();
+                mTvShow.setText("");
+                db.close();
+                break;
+            case R.id.btn_add_update:
                 db=myhelper.getWritableDatabase();
                 values=new ContentValues();
-                values.put("name",name);
-                values.put("class",Class);
-                values.put("zhiwu",zhiwu);
-                values.put("nublem",nublem);
+                values.put("name",name=Edtname.getText().toString());
+                values.put("nublem",nublem=Edtnublem.getText().toString());
+                values.put("class",Class=Edtclass.getText().toString());
+                values.put("zhiwu",zhiwu=Edtzhiwu.getText().toString());
                 if (Checkstu.isChecked()) {
                     stu += Checkstu.getText().toString().trim();
                 }
@@ -135,29 +161,8 @@ public class AddActivity extends AppCompatActivity implements View.OnClickListen
                     stu+= Checkyishu.getText().toString().trim();
                 }
                 values.put("home",stu);
-                db=myhelper.getReadableDatabase();
-                Cursor cursor=db.query("information",null,null,null,null,null,null);
-                if (cursor.getCount()==0){
-                    mTvShow.setText("");
-                    Toast.makeText(this,"没有信息",Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    cursor.moveToFirst();
-                    mTvShow.setText("name"+cursor.getString(1)+"nublem"+cursor.getString(2)+"class"+cursor.getString(3)+"zhiwu"+cursor.getString(4)+"stu"+cursor.getString(5));
-
-
-                }
-                while (cursor.moveToFirst()){
-                    mTvShow.append("name"+cursor.getString(1)+"nublem"+cursor.getString(2)+"class"+cursor.getString(3)+"zhiwu"+cursor.getString(4)+"stu"+cursor.getString(5));
-                }
-                cursor.close();
-                db.close();
-                break;
-            case R.id.btn_add_delete:
-                db=myhelper.getWritableDatabase();
-                db.delete("information",null,null);
-                Toast.makeText(this,"全部信息已删除",Toast.LENGTH_SHORT).show();
-                mTvShow.setText("");
+                db.update("information",values,"name=?",new String[]{Edtname.getText().toString()});
+                Toast.makeText(this,"信息已修改",Toast.LENGTH_SHORT).show();
                 db.close();
                 break;
 
